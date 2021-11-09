@@ -16,8 +16,6 @@ while(arrRndNum.length < 5){
    if(arrRndNum.indexOf(r) === -1) arrRndNum.push(r);
    
 };
-console.log(arrRndNum);
-
 
 // prendo l'h3 e ci stampo dentro i numeri
 let boxNumber = document.getElementById('insertNumbers').innerHTML = arrRndNum;
@@ -33,6 +31,8 @@ setTimeout(function () {
    let memorized = [];
 
    let counter = 0;
+
+   let tentativi = '';
 
 // chiedo 5 numeri all'utente
    for (let i = 0; i < 5; i++) {
@@ -60,14 +60,24 @@ setTimeout(function () {
          counter++;
          console.log(counter);
          
+      };
+
+
+      if (counter > 1 || counter == 0){
+         tentativi = 'numeri';
+      } else{
+         tentativi = 'numero';
       }
    }
 
-   containerNum.innerHTML = `<h1>Hai indovinato ${counter} numeri!! ${memorized}</h1>`;
+   containerNum.innerHTML = `
+   <h1>Hai indovinato ${counter} ${tentativi} !! </h1>
+   <h1 class="text-center">${memorized}</h1>
+   `;
 
   
 // 10 secondi di tempo
-}, 1000);
+}, 30000);
 
 
 
