@@ -37,3 +37,8 @@ main .container{
 h4{
    color: white;
 }
+
+main .row{
+   border: 5px solid white;
+   padding: 25px;
+}

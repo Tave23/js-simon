@@ -80,7 +80,7 @@ setTimeout(function () {
 
   
 // 30 secondi di tempo
-}, 3000);
+}, 30000);
 
 
 
