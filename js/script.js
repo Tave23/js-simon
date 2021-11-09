@@ -44,6 +44,14 @@ setTimeout(function () {
 
        // inserisco i numeri corretti nell'array
       if(arrRndNum.includes(userNmb)){
+         // se è già dentro al array allora rimuovilo
+         if(memorized.includes(userNmb)){
+            memorized.pop(userNmb)
+            counter--;
+
+            console.log(memorized);
+         }
+
          // pusho nel nuovo array
          memorized.push(userNmb);
          console.log(memorized);
@@ -51,19 +59,15 @@ setTimeout(function () {
          // aumento il counter
          counter++;
          console.log(counter);
-
-         // checcare se il numero è già esistente all'interno dell'array
-         // if(memorized.includes(userNmb)){
-
-         // }
+         
       }
    }
 
-   containerNum.innerHTML = `<h1>Hai indovinato ${counter} numeri!! (${memorized})</h1>`;
+   containerNum.innerHTML = `<h1>Hai indovinato ${counter} numeri!! ${memorized}</h1>`;
 
   
 // 10 secondi di tempo
-}, 30000);
+}, 1000);
 
 
 
