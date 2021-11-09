@@ -51,6 +51,11 @@ setTimeout(function () {
          // aumento il counter
          counter++;
          console.log(counter);
+
+         // checcare se il numero è già esistente all'interno dell'array
+         // if(memorized.includes(userNmb)){
+
+         // }
       }
    }
 
