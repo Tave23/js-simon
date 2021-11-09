@@ -34,7 +34,19 @@ setTimeout(function () {
       // ciclo 5 volte per non ripetere il const
       const userNmb = parseInt(prompt('inserisci un numero'));
       console.log(userNmb);
+
+       // creo una nuova array dove inserire i numeri corretti
+      let memorized = [];
+
+       // inserisco i numeri corretti nell'array
+      if(arrRndNum.includes(userNmb)){
+         memorized.push(userNmb);
+         console.log(memorized);
    }
+   }
+
+  
+   
    
    
 
