@@ -29,31 +29,36 @@ setTimeout(function () {
 // svuoto il container
    containerNum.innerHTML = '';
 
+   // creo una nuova array dove inserire i numeri corretti
+   let memorized = [];
+
+   let counter = 0;
+
 // chiedo 5 numeri all'utente
    for (let i = 0; i < 5; i++) {
       // ciclo 5 volte per non ripetere il const
       const userNmb = parseInt(prompt('inserisci un numero'));
       console.log(userNmb);
 
-       // creo una nuova array dove inserire i numeri corretti
-      let memorized = [];
+      
 
        // inserisco i numeri corretti nell'array
       if(arrRndNum.includes(userNmb)){
+         // pusho nel nuovo array
          memorized.push(userNmb);
          console.log(memorized);
+
+         // aumento il counter
+         counter++;
+         console.log(counter);
+      }
    }
-   }
+
+   containerNum.innerHTML = `<h1>Hai indovinato ${counter} numeri!! (${memorized})</h1>`;
 
   
-   
-   
-   
-
-   // if(arrRndNum.includes userNmb1)
-
-
-}, 1000);
+// 10 secondi di tempo
+}, 30000);
 
 
 
