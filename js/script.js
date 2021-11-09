@@ -37,7 +37,7 @@ setTimeout(function () {
 // chiedo 5 numeri all'utente
    for (let i = 0; i < 5; i++) {
       // ciclo 5 volte per non ripetere il const
-      const userNmb = parseInt(prompt('inserisci un numero'));
+      const userNmb = parseInt(prompt('scrivi un numero'));
       console.log(userNmb);
 
       
