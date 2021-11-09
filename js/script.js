@@ -3,9 +3,10 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 
+const containerNum = document.getElementById('cont-numeri')
+
 // creo array vuota
 let arrRndNum = [];
-
 
 // ************
 // funzione per generare numeri da 1 a X
@@ -19,14 +20,27 @@ console.log(arrRndNum);
 
 
 // prendo l'h3 e ci stampo dentro i numeri
-const boxNumber = document.getElementById('insertNumbers').innerHTML = arrRndNum;
+let boxNumber = document.getElementById('insertNumbers').innerHTML = arrRndNum;
 // console.log(boxNumber);
 
 
 // comandi dopo 30 secondi 
 setTimeout(function () {
+// svuoto il container
+   containerNum.innerHTML = '';
 
+// chiedo 5 numeri all'utente
+   for (let i = 0; i < 5; i++) {
+      // ciclo 5 volte per non ripetere il const
+      const userNmb = parseInt(prompt('inserisci un numero'));
+      console.log(userNmb);
+   }
    
+   
+
+   // if(arrRndNum.includes userNmb1)
+
+
 }, 1000);
 
 
