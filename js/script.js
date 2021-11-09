@@ -21,6 +21,7 @@ while(arrRndNum.length < 5){
 let boxNumber = document.getElementById('insertNumbers').innerHTML = arrRndNum;
 // console.log(boxNumber);
 
+console.log(arrRndNum);
 
 // comandi dopo 30 secondi 
 setTimeout(function () {
@@ -32,7 +33,9 @@ setTimeout(function () {
 
    let counter = 0;
 
+   // variabili per esito memory game
    let tentativi = '';
+   let vittoria = '';
 
 // chiedo 5 numeri all'utente
    for (let i = 0; i < 5; i++) {
@@ -65,7 +68,7 @@ setTimeout(function () {
 
       if (counter > 1 || counter == 0){
          tentativi = 'numeri';
-      } else{
+      } else {
          tentativi = 'numero';
       }
    }
@@ -76,8 +79,8 @@ setTimeout(function () {
    `;
 
   
-// 10 secondi di tempo
-}, 30000);
+// 30 secondi di tempo
+}, 3000);
 
 
 
